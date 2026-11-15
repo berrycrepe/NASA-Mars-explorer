@@ -1,0 +1,24 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/mars-nav",
+    "crates/mars-dataprep",
+    "app",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+
+# Compile dependencies (Bevy et al.) with optimizations even in dev so the app
+# runs smoothly, while keeping our own crates fast to recompile.
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3
+
+[profile.release]
+opt-level = 3
+lto = "thin"

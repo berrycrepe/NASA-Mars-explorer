@@ -1,0 +1,18 @@
+# Rust build output (several GB)
+/target
+**/target
+
+# GDAL statistics sidecars
+*.aux.xml
+
+# Raw NASA source products: large, and not ours to redistribute.
+# See data/PROVENANCE.md for how to re-download them.
+/data/raw
+
+# macOS
+.DS_Store
+
+# Note: Cargo.lock IS committed — this is a binary application, so a locked
+# dependency set makes builds reproducible.
+# Note: app/assets/ IS committed — the derived Jezero bundle (public-domain
+# USGS/NASA data) is what makes the app run out of the box.

@@ -1,0 +1,16 @@
+[package]
+name = "mars-explorer"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Mars Explorer — a native Google-Mars-style surface explorer with GPS-free astronaut navigation."
+
+[[bin]]
+name = "mars-explorer"
+path = "src/main.rs"
+
+[dependencies]
+mars-nav = { path = "../crates/mars-nav" }
+bevy = "0.14"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"

@@ -1,0 +1,12 @@
+[package]
+name = "mars-nav"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Geospatial + EVA-mission compute core for the Marswalk Planner (no I/O, no_std-friendly std lib)."
+
+# Intentionally dependency-free: keeps the WASM build tiny and the logic portable
+# between the browser (wasm) and the native data-prep CLI.
+[dependencies]
+
+[dev-dependencies]

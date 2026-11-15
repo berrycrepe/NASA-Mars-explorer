@@ -1,0 +1,12 @@
+{
+  "width": 256,
+  "height": 256,
+  "west": 77.1,
+  "east": 78.1,
+  "south": 17.9,
+  "north": 18.9,
+  "cell_size_m": 226.51,
+  "source": "MGS MOLA 463m DEM + MRO CTX imagery + Odyssey THEMIS IR-day (USGS/NASA), Jezero crop",
+  "imagery": "jezero_ctx.png",
+  "thermal": "jezero_themis.f32"
+}

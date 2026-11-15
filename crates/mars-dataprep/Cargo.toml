@@ -1,0 +1,21 @@
+[package]
+name = "mars-dataprep"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Offline CLI: convert NASA DEM/imagery into the Marswalk runtime asset bundle (height grid + manifest)."
+
+[[bin]]
+name = "mars-dataprep"
+path = "src/main.rs"
+
+[dependencies]
+mars-nav = { path = "../mars-nav" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+# Only needed for the real-GeoTIFF path; gated so the default build needs no libgdal.
+gdal = { version = "0.17", optional = true }
+
+[features]
+default = []
+real-data = ["dep:gdal"]
